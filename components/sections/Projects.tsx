@@ -25,7 +25,7 @@ export default function Projects() {
     {
       title: "JobFolio",
       description:
-        "JobFolio is a full stack web app for application tracking, coupled with a resume versioning system that allows users to store different resume versions as well as compare them side to side. It features a sleek Kanban board that allows users to categorize applications and stay organized during the busy application season.",
+        "JobFolio is a full stack web app for application tracking, coupled with a resume versioning system that allows users to store different resume versions as well as compare them side to side. It features a sleek Kanban board that allows users to categorize applications and stay organized during the busy application seasn.",
       technologies: [
         "React",
         "Next.js",
