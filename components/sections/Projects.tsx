@@ -5,22 +5,22 @@ import { ExternalLink, Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "ReminAI",
+      title: "EZ Form",
       description:
-        "ReminAI is a full stack web app that is tailored towards the older population suffering from solitude due to the busy schedules of their families. Its effortless storytelling using voice clones of family members gives users the sensation of being right there with the people they love and miss.",
+        " Ez Form uses conversational AI and voice technology to remove barriers created by keyboards, paperwork, and complex forms, especially for older adults and anyone who struggles with traditional digital interfaces. Our mission is to make essential tasks more accessible, human, and stress-free through AI.",
       technologies: [
         "React",
         "MongoDB",
         "Typescipt",
         "Tailwind CSS",
-        "ElevenLabs",
         "FastAPI",
-        "PostgreSQL",
-        "Django",
+        "Python",
+        "Gemini API",
         "Git",
       ],
-      github: "https://github.com/abdulselamadillmohammed/hack_the_valley",
-      image: "/ReminAI.jpg",
+      github: "https://github.com/tonypark4/HackHive2026",
+      demo: "",
+      image: "/EZ_Form.png",
     },
     {
       title: "JobFolio",
@@ -37,6 +37,7 @@ export default function Projects() {
         "Git",
       ],
       github: "https://github.com/kasimsuh/jobfolio",
+      demo: "https://jobfolio-rho.vercel.app/login",
       image: "/JobFolio.avif",
     },
     {
@@ -45,6 +46,7 @@ export default function Projects() {
         "SMART AIR is a kid-friendly Android app that helps children understand asthma, practice good inhaler technique, log symptoms/medicine use, and share parent-approved information with a healthcare provider via a concise, exportable report.",
       technologies: ["Java", "Android", "XML", "JUnit", "Mockito", "Firebase"],
       github: "https://github.com/Amal-Mantrala/SMART-AIR",
+      demo: "",
       image: "/SMART-AIR.jpg",
     },
   ];
@@ -105,6 +107,17 @@ export default function Projects() {
                       <Github size={18} />
                       Code
                     </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 border-2 border-black text-black rounded-md font-medium hover:bg-black hover:text-white transition-all duration-200 text-sm"
+                      >
+                        <ExternalLink size={18} />
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
