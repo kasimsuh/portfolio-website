@@ -23,6 +23,26 @@ export default function Projects() {
       image: "/EZ_Form.png",
     },
     {
+      title: "ReminAI",
+      description:
+        "ReminAI is a full stack web app that is tailored towards the older population suffering from solitude due to the busy schedules of their families. Its effortless storytelling using voice clones of family members gives users the sensation of being right there with the people they love and miss.",
+      technologies: [
+        "React",
+        "MongoDB",
+        "Typescipt",
+        "Tailwind CSS",
+        "ElevenLabs",
+        "FastAPI",
+        "PostgreSQL",
+        "Django",
+        "Python",
+        "Gemini API",
+        "Git",
+      ],
+      github: "https://github.com/abdulselamadillmohammed/hack_the_valley",
+      image: "/ReminAI.jpg",
+    },
+    {
       title: "JobFolio",
       description:
         "JobFolio is a full stack web app for application tracking, coupled with a resume versioning system that allows users to store different resume versions as well as compare them side to side. It features a sleek Kanban board that allows users to categorize applications and stay organized during the busy application seasn.",
