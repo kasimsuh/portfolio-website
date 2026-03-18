@@ -21,6 +21,9 @@ export default function Projects() {
       github: "https://github.com/tonypark4/HackHive2026",
       demo: "",
       image: "/EZ_Form.png",
+      imageFit: "cover",
+      imageClassName: "",
+      imageContainerClassName: "bg-gray-100",
     },
     {
       title: "ReminAI",
@@ -41,6 +44,9 @@ export default function Projects() {
       ],
       github: "https://github.com/abdulselamadillmohammed/hack_the_valley",
       image: "/ReminAI.jpg",
+      imageFit: "cover",
+      imageClassName: "",
+      imageContainerClassName: "bg-gray-100",
     },
     {
       title: "JobFolio",
@@ -59,6 +65,9 @@ export default function Projects() {
       github: "https://github.com/kasimsuh/jobfolio",
       demo: "https://jobfolio-rho.vercel.app/login",
       image: "/JobFolio.avif",
+      imageFit: "cover",
+      imageClassName: "",
+      imageContainerClassName: "bg-gray-100",
     },
     {
       title: "SMART-AIR",
@@ -68,15 +77,59 @@ export default function Projects() {
       github: "https://github.com/Amal-Mantrala/SMART-AIR",
       demo: "",
       image: "/SMART-AIR.jpg",
+      imageFit: "cover",
+      imageClassName: "",
+      imageContainerClassName: "bg-gray-100",
+    },
+    {
+      title: "SeniCare",
+      description:
+        "SeniCare is a multimodal health platform that helps clinics monitor seniors living alone through simple daily check-ins, combining voice interaction and camera-based signals to deliver real-time triage and AI-powered clinical insights.",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "OpenCV",
+        "MediaPipe",
+        "JWT Auth",
+      ],
+      github: "https://github.com/kasimsuh/senicare",
+      demo: "",
+      image: "/senicarelogo copy.png",
+      imageFit: "contain",
+      imageClassName: "p-4",
+      imageContainerClassName: "bg-white",
+    },
+    {
+      title: "beacon",
+      description:
+        "Beacon is an AI-powered platform that helps people facing housing instability or urgent basic-needs challenges quickly find nearby essential services and build a personalized path toward stability.",
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Supabase",
+        "Brave Search API",
+        "Google Gemini API",
+        "Google Places API",
+        "Zustand",
+      ],
+      github: "https://github.com/kasimsuh/beacon",
+      demo: "",
+      image: "/beacon2 copy.png",
+      imageFit: "contain",
+      imageClassName: "p-3",
+      imageContainerClassName: "bg-[#1f1f1f]",
     },
   ];
 
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center bg-white py-20"
+      className="relative z-10 flex min-h-screen items-center py-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
             Projects
@@ -89,11 +142,17 @@ export default function Projects() {
                 key={index}
                 className="border-2 border-black rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-white group"
               >
-                <div className="relative h-48 bg-gray-100 overflow-hidden">
+                <div
+                  className={`relative h-48 overflow-hidden ${project.imageContainerClassName}`}
+                >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className={`h-full w-full transition-transform duration-300 ${
+                      project.imageFit === "contain"
+                        ? "object-contain group-hover:scale-[1.02]"
+                        : "object-cover group-hover:scale-105"
+                    } ${project.imageClassName}`}
                   />
                 </div>
 

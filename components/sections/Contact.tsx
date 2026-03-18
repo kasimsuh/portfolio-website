@@ -33,9 +33,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center bg-white py-20"
+      className="relative z-10 flex min-h-screen items-center py-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
             Get In Touch
