@@ -12,7 +12,7 @@ export default function About() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "/SuhiyiniResume8.pdf";
     link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -33,31 +33,15 @@ export default function About() {
 
           <div className="space-y-6 text-gray-700 leading-relaxed">
             <p className="text-lg">
-              I’m a computer science student focused on software engineering and
-              systems-level problem solving. I like building software that
-              actually runs in the real world, not just assignments that pass
-              tests. <br /> <br /> Lately I’ve been exploring agentic AI
-              systems, especially how LLM-driven tools can plan, reason across
-              steps, and interact with external APIs. I’m teaching myself this
-              space outside class by building small prototypes and understanding
-              how orchestration, memory, and tool usage work under the hood
-              rather than treating models as black boxes. <br /> <br /> I’m also
-              developing an interest in cloud infrastructure and DevOps
-              practices. I’ve been learning how applications move from local
-              development to production: containerization, deployment workflows,
-              and why reliability, monitoring, and reproducibility matter as
-              much as writing code. <br /> <br />
-              I’ve participated in Hack the Valley 2025 and HackHive 2026, where
-              I worked in small teams to design and ship working prototypes
-              under time pressure. Those experiences taught me how to quickly
-              scope features, divide work, integrate messy codebases, and
-              present a technical idea clearly to judges and users. I learned
-              that communication and iteration speed matter just as much as
-              technical skill when building real software. <br /> <br />
-              I’m currently looking for software engineering internships where I
-              can contribute to backend systems, developer tooling, or
-              infrastructure-oriented projects while continuing to grow in cloud
-              and AI-driven applications.
+              I’m a Computer Science student focused on software engineering,
+              backend systems, and AI-powered applications. I like building
+              software that is usable, reliable, and closer to production than a
+              class assignment. Recently, I’ve been working with LLM-driven
+              tools, API orchestration, cloud infrastructure, and deployment
+              workflows. I’m especially interested in how AI systems use memory,
+              external tools, and structured reasoning to solve real tasks.
+              Currently looking for: software engineering internships in
+              backend, full-stack, developer tooling, cloud, or AI applications.
             </p>
           </div>
 
@@ -65,13 +49,13 @@ export default function About() {
             <h3 className="text-2xl font-bold text-black mb-6">Skills</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                "JavaScript",
                 "TypeScript",
                 "React",
                 "Next.js",
-                "Node.js",
+                "Express.js",
                 "Python",
-                "SQL",
+                "Java",
+                "PostgreSQL",
                 "Git",
                 "HTML/CSS",
                 "Tailwind CSS",
@@ -79,7 +63,7 @@ export default function About() {
                 "UI/UX Design",
                 "FastAPI",
                 "Docker",
-                "Kubernetes",
+                "Langchain",
                 "Prompt Engineering",
               ].map((skill) => (
                 <div

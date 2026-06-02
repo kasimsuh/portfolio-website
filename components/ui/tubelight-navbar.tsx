@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import Link from "next/link";
@@ -20,6 +20,92 @@ interface NavBarProps {
 
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name);
+
+  useEffect(() => {
+    const sections = items
+      .map((item) => {
+        const id = item.url.replace("#", "");
+
+        return {
+          id,
+          name: item.name,
+          element: document.getElementById(id),
+        };
+      })
+      .filter(
+        (
+          section
+        ): section is { id: string; name: string; element: HTMLElement } =>
+          Boolean(section.element)
+      );
+
+    if (sections.length === 0) {
+      return;
+    }
+
+    const setActiveSection = () => {
+      const viewportMarker = window.innerHeight * 0.35;
+      const atPageBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 4;
+
+      if (atPageBottom) {
+        setActiveTab(sections[sections.length - 1].name);
+        return;
+      }
+
+      const sectionAtMarker = sections.find(({ element }) => {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= viewportMarker && rect.bottom >= viewportMarker;
+      });
+
+      if (sectionAtMarker) {
+        setActiveTab(sectionAtMarker.name);
+        return;
+      }
+
+      const closestSection = sections.reduce((closest, section) => {
+        const rect = section.element.getBoundingClientRect();
+        const distance = Math.abs(rect.top - viewportMarker);
+
+        if (!closest || distance < closest.distance) {
+          return { name: section.name, distance };
+        }
+
+        return closest;
+      }, null as { name: string; distance: number } | null);
+
+      if (closestSection) {
+        setActiveTab(closestSection.name);
+      }
+    };
+
+    let isTicking = false;
+
+    const queueSectionUpdate = () => {
+      if (isTicking) {
+        return;
+      }
+
+      isTicking = true;
+      window.requestAnimationFrame(() => {
+        setActiveSection();
+        isTicking = false;
+      });
+    };
+
+    setActiveSection();
+
+    window.addEventListener("scroll", queueSectionUpdate, { passive: true });
+    window.addEventListener("resize", queueSectionUpdate);
+    window.addEventListener("hashchange", queueSectionUpdate);
+
+    return () => {
+      window.removeEventListener("scroll", queueSectionUpdate);
+      window.removeEventListener("resize", queueSectionUpdate);
+      window.removeEventListener("hashchange", queueSectionUpdate);
+    };
+  }, [items]);
 
   return (
     <div
