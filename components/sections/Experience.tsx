@@ -38,7 +38,6 @@ const experiences: ExperienceItem[] = [
       "Pursuing an Honours Bachelor of Science in Computer Science with a focus on software engineering, systems thinking, and practical product development.",
     achievements: [
       "Dean's List Scholar '25",
-      "GPA: 3.32/4.0",
       "Relevant coursework: Data Structures & Algorithms, Web Development, Software Design, Software Tools and Systems Programming, Discrete Mathematics, Linear Algebra II",
       "Active member of the Association of Math and Computer Science Students (AMACSS)",
     ],
@@ -47,16 +46,16 @@ const experiences: ExperienceItem[] = [
 
 const workExperiences: ExperienceItem[] = [
   {
-    title: "Software Engineering Specialist",
-    organization: "University of Toronto Scarborough",
-    period: "Sept 2024 - Present",
+    title: "Frontend Developer Intern",
+    organization: "AgroInnova Ltd",
+    period: "Jun 2023 - Aug 2023",
     description:
-      "Pursuing an Honours Bachelor of Science in Computer Science with a focus on software engineering, systems thinking, and practical product development.",
+      "During my internship at AgroInnova, I helped improve the user experience of an e-commerce platform built for farmers and vendors. I worked closely with developers and clients to understand what users struggled with, then turned those needs into cleaner page layouts, mobile-friendly screens, and easier navigation. A big part of my work was making the platform feel less intimidating for farmers who were not very comfortable with technology.",
     achievements: [
-      "Dean's List Scholar '25",
-      "GPA: 3.32/4.0",
-      "Relevant coursework: Data Structures & Algorithms, Web Development, Software Design, Software Tools and Systems Programming, Discrete Mathematics, Linear Algebra II",
-      "Active member of the Association of Math and Computer Science Students (AMACSS)",
+      "Designed landing pages and dashboard mockups in Figma for an e-commerce platform, supporting developer handoff and faster UI implementation ",
+      "Built responsive web pages with HTML and CSS, improving consistency across desktop and mobile devices",
+      "Worked with developers to identify and fix frontend bugs affecting usability and page behavior",
+      "Optimized interfaces for mobile access, improving usability for farmers and vendors using the platform remotely",
     ],
   },
 ];
@@ -149,6 +148,57 @@ export default function Experience() {
               </div>
 
               {experiences.map((experience) => (
+                <article
+                  key={`${experience.organization}-${experience.title}`}
+                  className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-[0_22px_60px_-24px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_-28px_rgba(0,0,0,0.35)] sm:p-8"
+                >
+                  <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex-1">
+                      <h4 className="mb-2 text-2xl font-bold text-black">
+                        {experience.title}
+                      </h4>
+                      <div className="flex items-center gap-2 text-gray-700">
+                        <Briefcase size={18} />
+                        <span className="font-medium">
+                          {experience.organization}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+                      <Calendar size={18} />
+                      <span className="whitespace-nowrap">
+                        {experience.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="mb-5 max-w-3xl leading-relaxed text-gray-700">
+                    {experience.description}
+                  </p>
+
+                  <div className="space-y-3">
+                    <h5 className="font-semibold text-black">Highlights</h5>
+                    <ul className="space-y-3">
+                      {experience.achievements.map((achievement) => (
+                        <li
+                          key={achievement}
+                          className="flex items-start gap-3 text-gray-700"
+                        >
+                          <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-black" />
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+              <div className="flex items-center gap-3 text-black">
+                <Briefcase size={20} />
+                <h3 className="text-2xl font-bold">Work</h3>
+              </div>
+
+              {workExperiences.map((experience) => (
                 <article
                   key={`${experience.organization}-${experience.title}`}
                   className="rounded-[1.75rem] border border-black/10 bg-white p-6 shadow-[0_22px_60px_-24px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_-28px_rgba(0,0,0,0.35)] sm:p-8"
