@@ -5,6 +5,7 @@ import Image from "next/image";
 
 type Project = {
   title: string;
+  event?: string;
   summary: string;
   technologies: string[];
   highlights: [string, string, string];
@@ -19,55 +20,79 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "EZ Form",
+    title: "SeniCare",
+    event: "CTRL+HACK+DEL 2.0 Winner",
     summary:
-      "A voice-first AI assistant that makes forms and paperwork easier to complete.",
+      "A multimodal clinic platform for monitoring seniors who live independently.",
     technologies: [
-      "React",
-      "MongoDB",
       "TypeScript",
-      "Tailwind CSS",
-      "FastAPI",
+      "React",
       "Python",
-      "Gemini API",
-      "Git",
+      "FastAPI",
+      "MongoDB",
+      "OpenCV",
+      "MediaPipe",
+      "JWT Auth",
     ],
     highlights: [
-      "Designed for older adults and anyone who struggles with keyboard-heavy digital workflows.",
-      "Uses conversational AI and voice input to turn rigid forms into a guided experience.",
-      "Built as a full-stack hackathon product spanning frontend, backend, and AI orchestration.",
+      "Built daily AI check-ins for senior health monitoring",
+      "Integrated Gemini Live API for conversational response capture",
+      "Used MediaPipe/OpenCV to extract video-based health signals",
     ],
-    github: "https://github.com/tonypark4/HackHive2026",
-    image: "/ezform.jpeg",
+    github: "https://github.com/kasimsuh/senicare",
+    image: "/senicare.jpeg",
     imageFit: "contain",
-    imageContainerClassName: "bg-gray-100",
+    imageClassName: "p-4",
+    imageContainerClassName: "bg-white",
   },
   {
-    title: "ReminAI",
+    title: "EcoHome Studio",
     summary:
-      "A storytelling platform that recreates family presence through voice-cloned memories.",
+      "An AI-assisted interior design experience with sustainability guidance and 3D preview.",
     technologies: [
-      "React",
-      "MongoDB",
       "TypeScript",
-      "Tailwind CSS",
-      "ElevenLabs",
-      "FastAPI",
-      "PostgreSQL",
-      "Django",
-      "Python",
-      "Gemini API",
-      "Git",
+      "Next.js",
+      "Supabase",
+      "Brave Search API",
+      "Google Gemini API",
+      "Google Places API",
+      "Zustand",
     ],
     highlights: [
-      "Built family dashboard with React and TypeScript",
-      "Displayed AI-generated stories from uploaded photos",
-      "Designed senior-friendly navigation and layouts",
+      "Built LangChain RAG pipeline for sustainability recommendations",
+      "Indexed 200+ document chunks with Supabase pgvector",
+      "Rendered interactive 3D homes using Three.js",
     ],
-    github: "https://github.com/abdulselamadillmohammed/hack_the_valley",
-    image: "/reminai.png",
+    github: "https://github.com/kasimsuh/ecohome-studio",
+    image: "/ecohome.png",
     imageFit: "contain",
-    imageContainerClassName: "bg-gray-100",
+    imageClassName: "p-3",
+    imageContainerClassName: "bg-[#1f1f1f]",
+  },
+  {
+    title: "Beacon",
+    event: "GenAI Genesis 2026",
+    summary:
+      "An AI-powered platform that helps people quickly find nearby essential services.",
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "Supabase",
+      "Brave Search API",
+      "Google Gemini API",
+      "Google Places API",
+      "Zustand",
+    ],
+    highlights: [
+      "Built for people facing housing instability or urgent basic-needs challenges.",
+      "Uses search and location data to surface relevant services with less friction.",
+      "Frames recommendations as a more personalized path toward short-term stability.",
+    ],
+    github: "https://github.com/kasimsuh/beacon",
+    image: "/beacon.png",
+    imageFit: "contain",
+    imageClassName: "p-3",
+    imageContainerClassName: "bg-[#1f1f1f]",
   },
   {
     title: "JobFolio",
@@ -95,6 +120,59 @@ const projects: Project[] = [
     imageContainerClassName: "bg-gray-100",
   },
   {
+    title: "EZ Form",
+    event: "HackHive 2026",
+    summary:
+      "A voice-first AI assistant that makes forms and paperwork easier to complete.",
+    technologies: [
+      "React",
+      "MongoDB",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "Python",
+      "Gemini API",
+      "Git",
+    ],
+    highlights: [
+      "Designed for older adults and anyone who struggles with keyboard-heavy digital workflows.",
+      "Uses conversational AI and voice input to turn rigid forms into a guided experience.",
+      "Built as a full-stack hackathon product spanning frontend, backend, and AI orchestration.",
+    ],
+    github: "https://github.com/tonypark4/HackHive2026",
+    image: "/ezform.jpeg",
+    imageFit: "contain",
+    imageContainerClassName: "bg-gray-100",
+  },
+  {
+    title: "ReminAI",
+    event: "Hack the Valley 2026",
+    summary:
+      "A storytelling platform that recreates family presence through voice-cloned memories.",
+    technologies: [
+      "React",
+      "MongoDB",
+      "TypeScript",
+      "Tailwind CSS",
+      "ElevenLabs",
+      "FastAPI",
+      "PostgreSQL",
+      "Django",
+      "Python",
+      "Gemini API",
+      "Git",
+    ],
+    highlights: [
+      "Built family dashboard with React and TypeScript",
+      "Displayed AI-generated stories from uploaded photos",
+      "Designed senior-friendly navigation and layouts",
+    ],
+    github: "https://github.com/abdulselamadillmohammed/hack_the_valley",
+    image: "/reminai.png",
+    imageFit: "contain",
+    imageContainerClassName: "bg-gray-100",
+  },
+  {
     title: "SMART-AIR",
     summary:
       "A kid-friendly Android app for asthma education, symptom tracking, and reporting.",
@@ -108,79 +186,6 @@ const projects: Project[] = [
     image: "/smartair.png",
     imageFit: "contain",
     imageContainerClassName: "bg-gray-100",
-  },
-  {
-    title: "SeniCare",
-    summary:
-      "A multimodal clinic platform for monitoring seniors who live independently.",
-    technologies: [
-      "TypeScript",
-      "React",
-      "Python",
-      "FastAPI",
-      "MongoDB",
-      "OpenCV",
-      "MediaPipe",
-      "JWT Auth",
-    ],
-    highlights: [
-      "Built daily AI check-ins for senior health monitoring",
-      "Integrated Gemini Live API for conversational response capture",
-      "Used MediaPipe/OpenCV to extract video-based health signals",
-    ],
-    github: "https://github.com/kasimsuh/senicare",
-    image: "/senicare.jpeg",
-    imageFit: "contain",
-    imageClassName: "p-4",
-    imageContainerClassName: "bg-white",
-  },
-  {
-    title: "Beacon",
-    summary:
-      "An AI-powered platform that helps people quickly find nearby essential services.",
-    technologies: [
-      "TypeScript",
-      "Next.js",
-      "Supabase",
-      "Brave Search API",
-      "Google Gemini API",
-      "Google Places API",
-      "Zustand",
-    ],
-    highlights: [
-      "Built for people facing housing instability or urgent basic-needs challenges.",
-      "Uses search and location data to surface relevant services with less friction.",
-      "Frames recommendations as a more personalized path toward short-term stability.",
-    ],
-    github: "https://github.com/kasimsuh/beacon",
-    image: "/beacon.png",
-    imageFit: "contain",
-    imageClassName: "p-3",
-    imageContainerClassName: "bg-[#1f1f1f]",
-  },
-  {
-    title: "EcoHome Studio",
-    summary:
-      "An AI-assisted interior design experience with sustainability guidance and 3D preview.",
-    technologies: [
-      "TypeScript",
-      "Next.js",
-      "Supabase",
-      "Brave Search API",
-      "Google Gemini API",
-      "Google Places API",
-      "Zustand",
-    ],
-    highlights: [
-      "Built LangChain RAG pipeline for sustainability recommendations",
-      "Indexed 200+ document chunks with Supabase pgvector",
-      "Rendered interactive 3D homes using Three.js",
-    ],
-    github: "https://github.com/kasimsuh/ecohome-studio",
-    image: "/ecohome.png",
-    imageFit: "contain",
-    imageClassName: "p-3",
-    imageContainerClassName: "bg-[#1f1f1f]",
   },
 ];
 
@@ -224,6 +229,11 @@ export default function Projects() {
 
                 <div className="flex flex-1 flex-col p-6">
                   <div className="space-y-4">
+                    {project.event !== undefined && (
+                      <span className="rounded-full border border-black/10 bg-gray-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gray-600">
+                        {project.event}
+                      </span>
+                    )}
                     <h3 className="text-2xl font-bold">{project.title}</h3>
 
                     <p className="text-base leading-relaxed text-gray-700">
