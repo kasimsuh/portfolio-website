@@ -368,18 +368,6 @@ export default function Experience() {
                       </span>
                     ))}
                   </div>
-
-                  <div className="mt-8 space-y-4 text-sm leading-relaxed text-gray-700">
-                    <p>
-                      The photo reel is now treated as a featured visual moment
-                      in the section instead of being embedded inside a
-                      project-style card.
-                    </p>
-                    <p>
-                      Once you add real candid team photos to `public/`, this
-                      area will feel much more personal and distinctive.
-                    </p>
-                  </div>
                 </aside>
               </div>
             </div>
