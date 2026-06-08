@@ -46,7 +46,7 @@ const experiences: ExperienceItem[] = [
 
 const workExperiences: ExperienceItem[] = [
   {
-    title: "Frontend Developer Intern",
+    title: "Software Developer Intern",
     organization: "AgroInnova Ltd",
     period: "Jun 2023 - Aug 2023",
     description:
