@@ -12,7 +12,7 @@ export default function About() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/SuhiyiniResume8.pdf";
+    link.href = "/SuhiyiniResume9.pdf";
     link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
