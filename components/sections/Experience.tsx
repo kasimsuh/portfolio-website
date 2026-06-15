@@ -62,27 +62,8 @@ const workExperiences: ExperienceItem[] = [
 
 const hackathonPhotos: HackathonPhoto[] = [
   {
-    event: "GenAI Genesis 2026",
-    src: "/hackathon1.jpeg",
-    alt: "Portrait of Suhiyini Kasim used as a temporary stand-in until hackathon candid photos are added",
-    caption: "",
-    objectPosition: "center 20%",
-  },
-  {
-    event: "CTRL+HACK+DEL 2.0",
-    src: "/hackathon2.jpeg",
-    alt: "EZ Form project screenshot used as a temporary stand-in for a HackHive 2026 team photo",
-    caption: "",
-  },
-  {
     event: "CTRL+HACK+DEL 2.0",
     src: "/hackathon3.jpeg",
-    alt: "ReminAI project screenshot used as a temporary stand-in for a Hack the Valley team photo",
-    caption: "",
-  },
-  {
-    event: "HackHive 2026",
-    src: "/hackathon4.jpeg",
     alt: "ReminAI project screenshot used as a temporary stand-in for a Hack the Valley team photo",
     caption: "",
   },
