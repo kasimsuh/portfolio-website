@@ -51,7 +51,7 @@ export default function About() {
               {[
                 "TypeScript",
                 "React",
-                "Angular",
+                "AngularJS",
                 "Next.js",
                 "Express.js",
                 "Python",
@@ -66,6 +66,7 @@ export default function About() {
                 "REST APIs",
                 "UI/UX Design",
                 "Docker",
+                "AWS",
                 "LangChain",
                 "LangGraph",
                 "Prompt Engineering",
