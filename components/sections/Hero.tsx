@@ -18,19 +18,6 @@ export default function Hero() {
     >
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(280px,380px)_1fr] lg:gap-16">
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[320px] overflow-hidden rounded-[2rem] border border-black/10 bg-white/70 shadow-2xl backdrop-blur-sm">
-              <Image
-                src="/profile.jpeg"
-                alt="Portrait of Suhiyini Kasim"
-                width={800}
-                height={1000}
-                priority
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </div>
-
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-5xl font-bold tracking-tight text-black sm:text-6xl lg:text-7xl">
